@@ -7,7 +7,9 @@ import { Logger} from '@shared';
 
 const log = new Logger('Home');
 
-import { appSetting, subEnvironmentSetting, baseUrl, DetectSubEnvironment } from "@env/appsettings"
+import { appSetting, subEnvironmentSetting, baseUrl, DetectSubEnvironment } from "@env/appsettings";
+import { environment } from "@env/environment";
+
 
 @Component({
   selector: 'app-home',
@@ -22,6 +24,7 @@ export class HomeComponent implements OnInit {
   subEnvironmentSettingValue = JSON.stringify(subEnvironmentSetting);
   baseUrlValue = baseUrl();
   detectSubEnvironment = DetectSubEnvironment();
+  environmentValue = JSON.stringify(environment);
 
   constructor(private quoteService: QuoteService) { }
 
