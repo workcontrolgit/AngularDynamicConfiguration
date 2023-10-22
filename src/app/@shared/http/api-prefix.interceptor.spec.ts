@@ -28,15 +28,15 @@ describe('ApiPrefixInterceptor', () => {
     httpMock.verify();
   });
 
-  it('should prepend environment.serverUrl to the request url', () => {
+  it('should prepend environment.apiQuoteUrl to the request url', () => {
     // Act
     http.get('/toto').subscribe();
 
     // Assert
-    httpMock.expectOne({ url: environment.serverUrl + '/toto' });
+    httpMock.expectOne({ url: environment.apiQuoteUrl + '/toto' });
   });
 
-  it('should not prepend environment.serverUrl to request url', () => {
+  it('should not prepend environment.apiQuoteUrl to request url', () => {
     // Act
     http.get('hTtPs://domain.com/toto').subscribe();
 
