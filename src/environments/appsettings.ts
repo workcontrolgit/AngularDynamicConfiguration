@@ -1,4 +1,3 @@
-
 // function to get base url from the index.html
 import { AppSetting } from '@app/@shared/models/app-setting-model';
 import { SubEnvironmentSetting } from '@app/@shared/models/sub-environment-setting-model';
@@ -18,8 +17,11 @@ export function baseUrl() {
 
 // function to determine the sub environment localhost or staging, production etc.
 export function DetectSubEnvironment() {
-  return baseUrl().includes('localhost') ? 'localhost'
-  : baseUrl().includes('staging') ? 'staging'
-  : baseUrl().includes('production') ? 'production'
-  : 'default';
+  return baseUrl().includes('localhost')
+    ? 'localhost'
+    : baseUrl().includes('staging')
+    ? 'staging'
+    : baseUrl().includes('production')
+    ? 'production'
+    : 'default';
 }

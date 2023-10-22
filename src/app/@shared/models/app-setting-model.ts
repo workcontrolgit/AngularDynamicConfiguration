@@ -1,4 +1,4 @@
-import { SubEnvironmentSetting as SubEnvironmentSetting } from "./sub-environment-setting-model"
+import { SubEnvironmentSetting as SubEnvironmentSetting } from './sub-environment-setting-model';
 
 export interface AppSetting {
   apiQuoteUrl: string;
