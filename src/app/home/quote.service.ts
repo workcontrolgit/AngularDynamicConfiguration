@@ -5,7 +5,7 @@ import { map, catchError } from 'rxjs/operators';
 import { environment } from '@env/environment';
 
 const routes = {
-  quote: (c: RandomQuoteContext) => environment.apiQuoteUrl + `/jokes/random?category=${c.category}`
+  quote: (c: RandomQuoteContext) => environment.apiQuoteUrl + `/jokes/random?category=${c.category}`,
 };
 
 export interface RandomQuoteContext {
@@ -14,19 +14,15 @@ export interface RandomQuoteContext {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class QuoteService {
-
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   getRandomQuote(context: RandomQuoteContext): Observable<string> {
-    return this.httpClient
-      .get(routes.quote(context))
-      .pipe(
-        map((body: any) => body.value),
-        catchError(() => of('Error, could not load joke :-('))
-      );
+    return this.httpClient.get(routes.quote(context)).pipe(
+      map((body: any) => body.value),
+      catchError(() => of('Error, could not load joke :-('))
+    );
   }
-
 }

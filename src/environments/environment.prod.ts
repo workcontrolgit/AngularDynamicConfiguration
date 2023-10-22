@@ -1,5 +1,5 @@
 import { env } from './.env';
-import { appSetting, subEnvironmentSetting } from "./appsettings"
+import { appSetting, subEnvironmentSetting } from './appsettings';
 
 export const environment = {
   production: true,
@@ -13,4 +13,3 @@ export const environment = {
   // dynamic set apiAuthTokenUrl using data from assets\config\app-setting-data.json by inspecting angular app baseurl
   apiAuthTokenUrl: subEnvironmentSetting[0].apiAuthTokenUrl,
 };
-
