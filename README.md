@@ -1,19 +1,20 @@
 # AngularDynamicConfiguration
 
-This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
-version 11.0.0
+This project was generated for Medium blog [Angular Trick: Override Environment variables with JSON App Settings](https://medium.com/@fuji-nguyen/angular-trick-override-environment-variables-with-json-app-settings-6675aed1a84b)
 
 # Getting started
 
 1. Go to project folder and install dependencies:
- ```sh
- npm install
- ```
+
+```sh
+npm install
+```
 
 2. Launch development server, and open `localhost:4200` in your browser:
- ```sh
- npm start
- ```
+
+```sh
+npm start
+```
 
 # Project structure
 
@@ -46,18 +47,18 @@ proxy.conf.js                backend proxy configuration
 
 Task automation is based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 
-Task                            | Description
---------------------------------|--------------------------------------------------------------------------------------
-`npm start`                     | Run development server on `http://localhost:4200/`
-`npm run serve:sw`              | Run test server on `http://localhost:4200/` with service worker enabled
-`npm run build [-- --configuration=production]` | Lint code and build web app for production (with [AOT](https://angular.io/guide/aot-compiler)) in `dist/` folder
-`npm test`                      | Run unit tests via [Karma](https://karma-runner.github.io) in watch mode
-`npm run test:ci`               | Lint code and run unit tests once for continuous integration
-`npm run e2e`                   | Run e2e tests using [Cypress](https://www.cypress.io/)
-`npm run lint`                  | Lint code
-`npm run translations:extract`  | Extract strings from code and templates to `src/app/translations/template.json`
-`npm run docs`                  | Display project documentation and coding guides
-`npm run prettier`              | Automatically format all `.ts`, `.js` & `.scss` files
+| Task                                            | Description                                                                                                      |
+| ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `npm start`                                     | Run development server on `http://localhost:4200/`                                                               |
+| `npm run serve:sw`                              | Run test server on `http://localhost:4200/` with service worker enabled                                          |
+| `npm run build [-- --configuration=production]` | Lint code and build web app for production (with [AOT](https://angular.io/guide/aot-compiler)) in `dist/` folder |
+| `npm test`                                      | Run unit tests via [Karma](https://karma-runner.github.io) in watch mode                                         |
+| `npm run test:ci`                               | Lint code and run unit tests once for continuous integration                                                     |
+| `npm run e2e`                                   | Run e2e tests using [Cypress](https://www.cypress.io/)                                                           |
+| `npm run lint`                                  | Lint code                                                                                                        |
+| `npm run translations:extract`                  | Extract strings from code and templates to `src/app/translations/template.json`                                  |
+| `npm run docs`                                  | Display project documentation and coding guides                                                                  |
+| `npm run prettier`                              | Automatically format all `.ts`, `.js` & `.scss` files                                                            |
 
 When building the application, you can specify the target configuration using the additional flag
 `--configuration <name>` (do not forget to prepend `--` to pass arguments to npm scripts).
